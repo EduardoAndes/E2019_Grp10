@@ -1,0 +1,5 @@
+C:\Users\Windows 10\Documents\Visual Studio 2015\Projects\E2019_Grp10\WaterCooperative\Domain\bin\Debug\Domain.dll
+C:\Users\Windows 10\Documents\Visual Studio 2015\Projects\E2019_Grp10\WaterCooperative\Domain\bin\Debug\Domain.pdb
+C:\Users\Windows 10\Documents\Visual Studio 2015\Projects\E2019_Grp10\WaterCooperative\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Windows 10\Documents\Visual Studio 2015\Projects\E2019_Grp10\WaterCooperative\Domain\obj\Debug\Domain.dll
+C:\Users\Windows 10\Documents\Visual Studio 2015\Projects\E2019_Grp10\WaterCooperative\Domain\obj\Debug\Domain.pdb

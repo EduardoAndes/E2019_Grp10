@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterCooperative", "WaterCooperative\WaterCooperative.csproj", "{45849B72-BE08-4178-B7B6-96B9BF3F84F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{16B47172-811C-407C-8D9C-26FC03F47712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{E76039D0-8DF6-4904-A4DA-19114CA84928}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{45849B72-BE08-4178-B7B6-96B9BF3F84F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45849B72-BE08-4178-B7B6-96B9BF3F84F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45849B72-BE08-4178-B7B6-96B9BF3F84F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B47172-811C-407C-8D9C-26FC03F47712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B47172-811C-407C-8D9C-26FC03F47712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B47172-811C-407C-8D9C-26FC03F47712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B47172-811C-407C-8D9C-26FC03F47712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76039D0-8DF6-4904-A4DA-19114CA84928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76039D0-8DF6-4904-A4DA-19114CA84928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76039D0-8DF6-4904-A4DA-19114CA84928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76039D0-8DF6-4904-A4DA-19114CA84928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
