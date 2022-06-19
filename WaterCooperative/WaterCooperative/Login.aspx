@@ -67,7 +67,7 @@
                                             <asp:Label Text="" ID="lblError" ForeColor="Red" Font-Bold="true" runat="server" />
 
                                             <br />
-                                            <br />S
+                                            <br />
 
                                         </div>
                                         <hr>
@@ -75,7 +75,7 @@
                                             <a class="small" href="forgot-password.html">Forgot Password?</a>
                                         </div>
                                         <div class="text-center">
-                                            <a class="small" href="register.html">Create an Account!</a>
+                                            <a class="small" href="Register.aspx">Create an Account!</a>
                                         </div>
                                     </div>
                                 </div>

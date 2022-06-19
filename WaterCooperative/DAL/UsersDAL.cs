@@ -18,5 +18,14 @@ namespace DAL
                 return con.Query<Users>(sqlQuery, obj).FirstOrDefault();
             }
         }
+        public static bool Insert (Users user)
+        {
+            string sql = "INSERT INTO dbo.Users (Username, Password, FirstName, LastName) VALUES (@Username, @Password, @FirstName, @LastName)";
+
+            using(var con = ConnectionUtil.GetConnection())
+            {
+                return con.Execute(sql, user) > 0;
+            }
+        }
     }
 }
