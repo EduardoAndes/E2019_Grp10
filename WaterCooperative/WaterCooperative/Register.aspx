@@ -19,7 +19,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-primary">
     <form id="form1" runat="server">
@@ -71,9 +71,6 @@
                                
                             </div>
                             <hr>
-                            <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
                             <div class="text-center">
                                 <a class="small" href="Login.aspx">Already have an account? Login!</a>
                             </div>
