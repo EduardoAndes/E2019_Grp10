@@ -29,6 +29,7 @@ namespace Business
         public int? TotalConsume { get; set; }
 
         public decimal? Total { get; set; }
+        public int? UserId { get; set; }
 
         public DateTime? CrDate { get; set; }
     }

@@ -16,3 +16,5 @@ C:\Users\Zynon\Desktop\BillingWater\BillingWater\Repository\bin\Debug\Business.d
 C:\Users\Zynon\Desktop\BillingWater\BillingWater\Repository\bin\Debug\EntityFramework.xml
 C:\Users\Zynon\Desktop\BillingWater\BillingWater\Repository\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Zynon\Desktop\BillingWater\BillingWater\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\Zynon\Desktop\BillingWater\BillingWater\Repository\bin\Debug\CoreLib.dll
+C:\Users\Zynon\Desktop\BillingWater\BillingWater\Repository\bin\Debug\CoreLib.pdb

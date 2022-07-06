@@ -67,6 +67,10 @@
       <Project>{1dc8ffc3-4582-46b9-a20f-5965b2fefa27}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CoreLib\CoreLib.csproj">
+      <Project>{0ECD0DFC-0738-442B-BC43-45D99F53D29E}</Project>
+      <Name>CoreLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
