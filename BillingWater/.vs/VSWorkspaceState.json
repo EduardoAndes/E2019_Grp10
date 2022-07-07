@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Billing_True",
+    "\\Billing_True\\BillingWater",
+    "\\Billing_True\\BillingWater\\packages",
+    "\\Billing_True\\BillingWater\\Repository",
+    "\\Billing_True\\BillingWater\\Repository\\bin",
+    "\\Billing_True\\BillingWater\\Repository\\Interface",
+    "\\Billing_True\\BillingWater\\Repository\\obj",
+    "\\Billing_True\\BillingWater\\Repository\\Properties",
+    "\\Billing_True\\BillingWater\\Repository\\Repository"
+  ],
+  "PreviewInSolutionExplorer": false
+}

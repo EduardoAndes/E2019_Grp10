@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jiDHjex+pMHw5ponXzO1PfnI02HxH1dhTIIBbFfy/0Twky6MXsK1TAs5GjjAtSGs6IjLJ3l0FaowjPpgKlolxg==",
+  "dgSpecHash": "9tbcey8aAtXgBC2uTq8tbVJxvpsCrNOvwvU+ZKkxX/hKTGXBAHRS/gy6Sye+HGMBU3OtUPCs9fW4m94QO/N73Q==",
   "success": true,
-  "projectFilePath": "D:\\CNC Manager\\CNCMANAGER\\CNCMANAGER\\BillingWater\\Billing_True\\BillingWater\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Users\\Windows 10\\Documents\\Visual Studio 2015\\Projects\\E2019_Grp10\\BillingWater\\Billing_True\\BillingWater\\Business\\Business.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cserquina\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
+    "C:\\Users\\Windows 10\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
   ],
   "logs": []
 }
