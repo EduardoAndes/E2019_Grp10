@@ -1,0 +1,96 @@
+﻿@using System.Web.Optimization
+@using WebHelpers.Mvc5.Enum
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        @if (!string.IsNullOrWhiteSpace(ViewBag.Title))
+        {
+            @ViewBag.Title@: -
+        }
+        Water Bill
+    </title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    @Styles.Render("~/Bundles/css")
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @Scripts.Render("~/Bundles/js")
+    <link href="~/Content/loader/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/Content/DataTable/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/scripts/DataTable/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTable/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/scripts/DataTable/dataTables.checkboxes.css" rel="stylesheet" />
+    <link href="~/Content/DataTable/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Intro/introjs.min.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery.toast.min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css" integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js" integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/Scripts/Global.js"></script>
+    <script src="~/Scripts/aes.js"></script>
+    <script src="~/Content/Intro/intro.min.js"></script>
+    <script src="~/Content/js/jquery.toast.min.js"></script>
+
+    <script src="~/Scripts/Highschart/highcharts.js"></script>
+    <script src="~/Scripts/Highschart/histogram-bellcurve.js"></script>
+    <script src="~/Scripts/Highschart/accessibility.js"></script>
+    <script src="~/Scripts/Highschart/export-data.js"></script>
+    <script src="~/Scripts/Highschart/exporting.js"></script>
+    <script src="~/Scripts/Highschart/ionicons.esm.js"></script>
+    <script src="~/Scripts/Highschart/ionicons.js"></script>
+    <script src="~/Scripts/Highschart/pareto.js"></script>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        @Html.Partial("_Header")
+        @Html.Partial("_Sidebar")
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    @ViewBag.Title
+                    <small>@ViewBag.Description</small>
+                </h1>
+            </section>
+
+            <section class="content">
+                @RenderBody()
+            </section>
+        </div>
+
+        @Html.Partial("_ControlSidebar")
+    </div>
+
+    <script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTable/dataTables.bootstrap4.min.js"></script>
+
+    <script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/DataTable/moment.min.js"></script>
+
+    <script src="~/Scripts/DataTable/dataTables.checkboxes.min.js"></script>
+    <script src="~/Scripts/DataTable/buttons.print.min.js"></script>
+    <script src="~/Scripts/DataTable/dataTables.buttons.min.js"></script>
+    <script src="~/Scripts/DataTable/buttons.colVis.min.js"></script>
+    <script src="~/Scripts/DataTable/buttons.flash.min.js"></script>
+    <script src="~/Scripts/DataTable/jszip.min.js"></script>
+    <script src="~/Scripts/DataTable/pdfmake.min.js"></script>
+    <script src="~/Scripts/DataTable/vfs_fonts.js"></script>
+    <script src="~/Scripts/DataTable/buttons.html5.min.js"></script>
+  
+
+    <script src="~/Scripts/DataTable/dataTables.select.min.js"></script>
+    <script src="~/Scripts/DataTable/datetime.js"></script>
+
+
+    <script src="@RouteJs.RouteJsHandler.HandlerUrl"></script>
+    <script src="@EnumHandler.HandlerUrl"></script>
+   
+    @RenderSection("ViewSpecificJavascript", required: false)
+</body>
+</html>

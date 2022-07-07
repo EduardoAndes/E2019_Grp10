@@ -1,0 +1,118 @@
+﻿
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="box box-primary box-solid" id="BarcodeTypeCard">
+            <div class="box-header"><h5 class="box-title">Add Bill</h5></div>
+            <div class="box-body">
+                <form id="frmBarcodeType">
+                    @Html.AntiForgeryToken()
+                    <div class="span6" data-step="1" data-intro="Type Name to to know your name" data-position='right'>
+                        <div class="input-group mb-3">
+
+                            <div class="input-group-addon">
+                                <span class="input-group-text">Amount</span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="" id="txtAmountPaid" name="txtAmountPaid" min="" max="" value="">
+                        </div>
+                    </div>
+                   
+
+                    <input type="text" id="UserId" name="UserId" value="@ViewBag.id" hidden />
+                    <button class="btn btn-default btn-rounded " type="submit" id="btnAdd">
+                           Add
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <small>
+            <samp id="lblOutput" class="">
+
+            </samp>
+        </small>
+    </div>
+</div>
+
+<div class="modal fade" id="mdLoader" role="dialog" aria-labelledby="mdLoaderLabel" style="overflow: hidden">
+    <div class="row" style="position:absolute;top: 30%;left:50%">
+
+        <div class="loader"></div>
+    </div>
+</div>
+
+<input type="hidden" value="@Session["MillingMachine"]" name="millName" id="millName" />
+
+<script>
+
+    $(function () {
+        $('#btnAdd').click(function (e) {
+            e.preventDefault()
+            if ($('#txtAmountPaid').val() == "") {
+                $.toast({
+                    heading: 'Warning',
+                    text: 'Please input txtAmountPaid',
+                    icon: 'warning',
+                    hideAfter: 3000,
+                    position: 'top-right',
+                    stack: true
+                });
+
+            }
+         
+
+            if ($('#txtAmountPaid').val() != "") {
+
+                LoaderStart();
+
+                $('#btnAdd').addClass('disabled')
+                $('#lblOutput').hide().html('')
+                $.ajax({
+                    url: '',
+                    type: 'POST',
+                    data: $('#frmBarcodeType').serialize(),
+                    success: function (data) {
+
+
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: data.Message,
+                            showLoaderOnConfirm: true,
+                            allowOutsideClick: false,
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                            .then((result) => {
+                                LoaderEnd();
+                                $("#loaderDiv").hide();
+                                $("#myModal").modal("hide");
+
+
+                                $('#txtName').val('')
+                                $('#slProduct').val([])
+
+                                if (data.IsMessageList) {
+                                    for (var i = 0; i < data.Message.length; i++) {
+                                        $('#lblOutput').append($(`<p>${data.Message[i]}</p>`).hide().fadeIn('fast'))
+                                    }
+                                }
+                                else {
+
+                                    $('#lblOutput').html(data.Message)
+                                }
+                            })
+
+                    },
+                    complete: function () {
+
+                        $('#btnAdd').removeClass('disabled')
+                        $('#lblOutput').fadeIn('fast')
+                        LoaderEnd();
+                    }
+                })
+            }
+        })
+    })
+</script>

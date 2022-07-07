@@ -1,0 +1,162 @@
+﻿
+@{
+
+}
+
+<div class="box box-primary box-solid">
+    <div class="box-header">
+        <h3 class="box-title">View Paid</h3>
+        <div class="pull-right">
+        </div>
+
+    </div>
+
+    <div class="box-body">
+
+        <table id="MyDataTable" class="display nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Reference
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Bill
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Due Date
+                    </th>
+                    <th>
+                        Total Consume
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Created Date
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+        <div class="modal fade" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                        <h3 class="modal-title">Admin Settings</h3>
+                    </div>
+                    <div class="modal-body" id="myModalBodyDiv1">
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <input type="hidden" id="hiddenEmployeeId" />
+    </div>
+</div>
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        // $("#MyDataTable").DataTable();
+
+        GetForPrinting();
+    })
+    var GetForPrinting = function () {
+
+        $.ajax({
+
+            type: "Get",
+            url: "/Admin/getviewCustomerBillPaid",
+            success: function (response) {
+
+                BindDataTable(response);
+
+            }
+        })
+
+    }
+
+
+    var BindDataTable = function (response) {
+
+        $("#MyDataTable").DataTable({
+            "order": [[1, "asc"]],
+            "aaData": response, "order": [0, "asc"],
+            "lengthMenu": [[10, 25, 50, 100000], [10, 25, 50, "All"]],
+            dom: 'Blfrtip',
+            "aoColumns": [
+                { "mData": "ReferenceNumber" },
+                { "mData": "Name" },
+                { "mData": "Bill" },
+                { "mData": "Status" },
+                { "mData": "DueDate" },
+                { "mData": "TotalConsume" },
+                { "mData": "Total" },
+                {
+                    "mData": "CrDate",
+                    render: function (CrDate, type, row) {
+                        return (moment(CrDate).format("YYYY-MM-DD hh:mm:ss"));
+                    }
+                }
+
+
+            ],
+            buttons: [{
+                extend: 'collection',
+                text: 'Option',
+                buttons: [
+                    //'pdf',
+                    'copy', 'csv', 'excel',
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL',
+                    },
+                    {
+
+
+                        extend: 'print',
+                        exportOptions: {
+                            columns: ':visible'
+                        },
+
+                    },
+                    'colvis'
+                ],
+                columnDefs: [{
+                    targets: -1,
+                    visible: false
+                }]
+
+            }]
+
+
+        });
+    }
+
+
+</script>
+
+
+
+

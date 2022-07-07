@@ -1,0 +1,45 @@
+USE [ret]
+GO
+/****** Object:  Table [dbo].[Billing]    Script Date: 07/07/2022 7:00:30 pm ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Billing](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ReferenceNumber] [varchar](50) NULL,
+	[Name] [varchar](50) NULL,
+	[Bill] [varchar](50) NULL,
+	[Status] [varchar](50) NULL,
+	[DueDate] [varchar](50) NULL,
+	[TotalConsume] [int] NULL,
+	[Total] [decimal](18, 0) NULL,
+	[UserId] [int] NULL,
+	[AmountPaid] [decimal](18, 0) NULL,
+	[OutstandingBalance] [decimal](18, 0) NULL,
+	[CrDate] [datetime] NULL,
+ CONSTRAINT [PK_Billing] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UserAccounts]    Script Date: 07/07/2022 7:00:31 pm ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserAccounts](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[AccountId] [int] NULL,
+	[AccountName] [varchar](50) NULL,
+	[AccountUserName] [varchar](50) NULL,
+	[AccountPassword] [varchar](50) NULL,
+	[AccountEmail] [varchar](50) NULL,
+	[AccountType] [nchar](10) NULL,
+ CONSTRAINT [PK_UserAccounts] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO

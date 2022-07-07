@@ -1,5 +1,0 @@
-C:\Users\Zynon\Desktop\BillingWater\BillingWater\CoreLib\obj\Debug\CoreLib.csproj.CoreCompileInputs.cache
-C:\Users\Zynon\Desktop\BillingWater\BillingWater\CoreLib\bin\Debug\CoreLib.dll
-C:\Users\Zynon\Desktop\BillingWater\BillingWater\CoreLib\bin\Debug\CoreLib.pdb
-C:\Users\Zynon\Desktop\BillingWater\BillingWater\CoreLib\obj\Debug\CoreLib.dll
-C:\Users\Zynon\Desktop\BillingWater\BillingWater\CoreLib\obj\Debug\CoreLib.pdb

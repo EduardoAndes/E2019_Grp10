@@ -1,0 +1,61 @@
+﻿@using WebHelpers.Mvc5
+<aside class="main-sidebar">
+    <section class="sidebar">
+        @* BEGIN Search *@
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        @* END Search *@
+        @* BEGIN Menu *@
+        @if (Session["AccountType"] == "Admin")
+        {
+    <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">HEADER</li>
+        <li class="@Url.IsLinkActive("Index", "Admin")">
+            <a href="@Url.Action("Index", "Admin")"><i class="fa fa-link"></i> <span>Home</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("viewBill", "Admin")">
+            <a href="@Url.Action("viewBill", "Admin")"><i class="fa fa-link"></i> <span>Add Bill</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("viewCustomerBill", "Admin")">
+            <a href="@Url.Action("viewCustomerBill", "Admin")"><i class="fa fa-link"></i> <span>View All Bill</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("viewCustomerBillNotPaid", "Admin")">
+            <a href="@Url.Action("viewCustomerBillNotPaid", "Admin")"><i class="fa fa-link"></i> <span>Bill Not Paid</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("viewCustomerBillPaid", "Admin")">
+            <a href="@Url.Action("viewCustomerBillPaid", "Admin")"><i class="fa fa-link"></i> <span>Bill Paid</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("CreateUser", "Admin")">
+            <a href="@Url.Action("CreateUser", "Admin")"><i class="fa fa-link"></i> <span>Add User</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("viewUsers", "Admin")">
+            <a href="@Url.Action("viewUsers", "Admin")"><i class="fa fa-link"></i> <span>Add User</span></a>
+        </li>
+
+    </ul>
+        }
+        else
+        {
+    <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">HEADER</li>
+        <li class="@Url.IsLinkActive("Index", "Customer")">
+            <a href="@Url.Action("Index", "Customer")"><i class="fa fa-link"></i> <span>Home</span></a>
+        </li>
+        <li class="@Url.IsLinkActive("viewPaid", "Customer")">
+            <a href="@Url.Action("viewPaid", "Customer")"><i class="fa fa-link"></i> <span>View Paid</span></a>
+        </li>
+        
+    </ul>
+        }
+
+        @* END Menu *@
+    </section>
+</aside>
